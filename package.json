@@ -1,0 +1,28 @@
+{
+  "name": "hclpproject",
+  "version": "1.0.0",
+  "description": "Tests for HCL",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emyrTomos/HCLProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emyrTomos/HCLProject/issues"
+  },
+  "homepage": "https://github.com/emyrTomos/HCLProject#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "browserify": "^14.1.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "nedb": "^1.8.0",
+    "swig": "^1.4.2"
+  }
+}

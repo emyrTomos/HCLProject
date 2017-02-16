@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var debug = require('debug')('expressapp');
+var app = require('../app');
+var http = require('http');
+app.set('port', process.env.PORT || 8080);
+
+var server = http.createServer(app);
+var boot = function () {
+  server.listen(app.get('port'), function(){
+  console.info('Express server listening on port ' + app.get('port') + 'in env: ' + app.get('env'));
+});
+}
+var shutdown = function() {
+  server.close();
+}
+if (require.main === module) {
+  boot();
+}
+else {
+  console.info('Running app as a module')
+  exports.boot = boot;
+  exports.shutdown = shutdown;
+  exports.port = app.get('port');
+}
